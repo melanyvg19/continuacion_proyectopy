@@ -1,0 +1,297 @@
+*
+{
+    box-sizing: border-box; 
+}
+
+body
+{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+nav{
+    margin: 10px;
+    background-color: #98bea4;
+    text-align: center;
+    padding-top: 10px 0; 
+    border-radius: 10px;
+}
+
+.menu-horizontal{
+    list-style: none;
+    display: inline-flex;
+    justify-content: space-around;    
+}
+
+.menu-horizontal > li >a{
+    display: block;
+    padding: 15px 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.menu-horizontal > li:hover{
+    background-color: #7ebc91;
+}
+
+.menu-vertical{
+    position:absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .5); 
+    z-index: 1;   
+    align-items: center;
+}
+
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+}
+
+.menu-vertical li:hover{
+    background-color: rgb(113, 134, 92);
+}
+
+.menu-vertical li a{
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 15px 15px 15px 20px;
+}
+
+
+nav a{
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(70, 69, 69);
+    padding: 5px 15px;
+}
+
+.encabezado-img{
+    background-image: url("/Assets/img/home.jpeg");
+    height: 300px;
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    margin: 10px;  
+    border-radius: 10px;
+}
+
+.encabezado-img h1{
+    font-size: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000000;
+}
+.encabezado-img img{
+    height: 100px;
+    margin-top: 10px;
+}
+
+.caja1{
+    background-color:#98bea4;
+    margin: 10px;
+    height: 20rem;
+    margin-top: 1rem;
+    padding: 1.3rem;
+    position: relative;
+    border-radius: 10px;
+ }
+
+.caja1 h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;       
+}
+.caja1 p{
+    text-align: center;
+}
+.caja1 hr{
+    width: 40%;
+color: #000000;
+    
+}
+
+.center{    
+    float: center;
+    max-width: 370px;
+    padding: 1.875rem;
+}
+
+
+.caja1:hover{
+    background-color: aquamarine;
+}
+
+/* Parte Quienes Somos */
+
+.cuadroGeneral{
+    margin: 20px;
+    height: 100%;
+}
+.cuadroGeneral img{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin-right: 20px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tituloQuienes{
+    text-align: center;
+    
+}
+
+.Keylly{
+    display: flex;
+    align-items: center;
+    border: 3px solid #647e6c;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #98bea4;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);  
+}
+
+.textok{
+    width: 70%;
+    text-align: right   ;
+}
+
+.imagenk{
+    
+    width: 30%;
+    height: 100%;
+    background-color:#98bea4;
+}
+
+.JoseDaniel{
+    display: flex;
+    align-items: center;
+    border: 3px solid #647e6c;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #98bea4;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+.textoj{
+    width: 70%;
+    text-align: right   ;
+}
+
+.imagenj{
+    
+    width: 30%;
+    height: 100%;
+    background-color:#98bea4;
+}
+
+.Julian{
+    display: flex;
+    align-items: center;
+    border: 3px solid #647e6c;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #98bea4;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+.textoju{
+    width: 70%;
+    text-align: right   ;
+}
+
+.imagenju{
+    
+    width: 30%;
+    height: 100%;
+    background-color:#98bea4;
+}
+
+
+.Melany{
+    display: flex;
+    align-items: center;
+    border: 3px solid #647e6c;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #98bea4;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+.textom{
+    width: 70%;
+    text-align: right   ;
+}
+
+.imagenm{
+    width: 30%;
+    height: 100%;
+    background-color:#98bea4;
+}
+
+.DanielRios{
+    display: flex;
+    align-items: center;
+    border: 3px solid #647e6c;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #98bea4;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+.textod{
+    width: 70%;
+    text-align: right
+}
+
+.imagend{
+    width: 30%;
+    height: 100%;
+    background-color:#98bea4;
+}
+
+/*RESPONSIVE DESIGN*/
+
+
+
+@media screen and (max-width: 1000px){
+    .caja1{
+        display: flex;
+        width: 100%;
+        align-items: center;  
+        flex-direction: column;
+        height: 120%;
+        background-color: #98bea4;
+        border-radius: 10px;
+}
+
+}
+
+@media screen and (max-width: 600px){
+    .caja1{
+        display: flex;
+        width: 100%;
+        align-items: center;  
+        flex-direction: column;
+        height: 120%;
+        background-color: #98bea4;
+        border-radius: 10px;
+}
+.menu-horizontal{
+    display: flex;
+    width: 100%;
+    align-items: center;  
+    flex-direction: column;
+    height: 100%;
+    background-color: #98bea4;
+    border-radius: 10px;
+}
+}
+
+

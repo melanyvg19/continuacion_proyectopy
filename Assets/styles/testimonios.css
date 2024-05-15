@@ -1,0 +1,129 @@
+.contenedortitulo{
+    background-color: #98bea4;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.testimonios{
+    text-align: center;
+}
+
+.contenedortitulo:hover{
+    background-color: aquamarine;
+}
+
+.contenedort{
+    display: flex;
+    margin: 10px;
+    height: 1000px;
+    border-radius: 10px;
+}
+
+.columnaa{
+    
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.foto1{
+    background-color: white;
+    height: 25%;
+    width: 100%;
+    background-size: cover;
+    background-image: url("/Assets/img/testimonio1.jpeg");
+    border-radius: 10px;
+}
+.historia1{
+    background-color: brown;
+    height: 25%;
+    width: 100%;
+    border-radius: 10px;
+    text-align: left;
+}
+.foto2{
+    background-color: rgb(12, 9, 212);
+    width: 100%;
+    height: 25%;
+    background-image: url("/Assets/img/testimonio3.jpg");
+    background-size: cover;
+    border-radius: 10px;
+}
+.historia2{
+    background-color: rgb(134, 248, 223);
+    height: 25%;
+    width: 100%;
+    border-radius: 10px;
+    text-align: left;
+}
+.columnab{
+    
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.historia3{
+    background-color: blueviolet;
+    height: 25%;
+    width: 100%;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: right;
+}
+.foto3{
+    background-color: rgb(55, 219, 211);
+    height: 25%;
+    width: 100%;
+    background-image: url("/Assets/img/testimonio2.jpg");
+    background-size: cover;
+    border-radius: 10px;
+}
+.historia4{
+    background-color: rgb(115, 183, 247);
+    width: 100%;
+    height: 25%;
+    border-radius: 10px;
+    text-align: right;
+}
+.foto4{
+    background-color: rgb(9, 180, 129);
+    height: 25%;
+    width: 100%;
+    background-image: url("/Assets/img/testimonio4.jpg");
+    background-size: cover;
+    border-radius: 10px;
+}
+
+
+
+
+
+/*RESPONSIVE DESIGN*/
+
+/*
+
+
+@media screen and (max-width: 1000px){
+    .contenedort{
+    display: flex;
+    width: 100%;
+    align-items: center;  
+    flex-direction: column;
+    height: 100%;
+    background-color: #98bea4;
+    border-radius: 10px;
+    }
+}
+*/
+@media screen and (max-width: 600px){
+    .contenedort{
+        display: flex;
+        width: 120%;
+        align-items: center;  
+        flex-direction: column;
+        height: 120%;
+        background-color: #98bea4;
+        border-radius: 10px;
+}
+}

@@ -1,0 +1,125 @@
+/* Estilos para la seccion del Dashboard */
+div#encabezado{
+    background-color: #98bea4;
+    width: 95%;
+    height: 10rem;
+    margin-left: 30px;
+    margin-right:30px;
+    margin-top: 5rem;
+    border-radius: 8px;
+  }
+
+div#encabezado h1{
+    text-align: center; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+div#encabezado h2{
+    text-align: center; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+div#encabezado hr{
+    width: 20%;
+}
+
+.dashboard-flex{
+    width: 95%;
+    height: auto; 
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+div#flexbox1{
+    background-image: url("/Assets/img/ira.jpeg");    
+    background-repeat: no-repeat;
+    width: 540px;
+    height: 390px;
+    border-radius: 20px;
+    margin: 10px;
+    margin-left: 30px;
+}
+
+div#flexbox2{
+    background-image: url("/Assets/img/ira2.jpeg");
+    background-repeat: no-repeat;
+    width: 540px;
+    height: 390px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.dashboard-flex cite{
+    text-align: center;
+    font-size: 18px;
+    display: block;
+    margin: 10px;
+}
+
+div#flexbox3 p{
+    width: 540px;
+    height: 350px;
+    background-color: #98bea4;
+    border-radius: 20px;
+    margin-top: 5rem;
+    margin-left: 20px;
+    padding: 50px;
+    padding-left: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
+div#flexbox4{
+    background-image: url("/Assets/img/siata.jpeg");
+    width: 540px;
+    height: 500px;
+    background-color: #98bea4;
+    border-radius: 20px;
+    margin: 10px;    
+    float: right;
+}
+
+#encabezado:hover{
+    background-color: aquamarine;
+}
+
+div#flexbox3 p:hover{
+    background-color: aquamarine;
+}
+
+/*RESPONSIVE DESIGN*/
+
+/*
+
+@media screen and (max-width: 800px){
+    div#flexbox3 p {
+    display: flex;
+    width: 95%;
+    align-items: center;  
+    flex-direction: column;
+    height: 80%;
+    background-color: #98bea4;
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+    }
+}
+/*
+@media screen and (min-width: 800px){
+    div#flexbox3 p {
+        display: flex;
+        width: 70%;
+        align-items: center;  
+        flex-direction: column;
+        
+        background-color: #98bea4;
+        border-radius: 10px;
+        font-size: 15px;
+        text-align: center;
+}
+}

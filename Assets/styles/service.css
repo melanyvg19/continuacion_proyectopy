@@ -1,0 +1,47 @@
+.servicej{
+    margin: 1rem;
+    display: flex;
+    background-color:white;
+    border-radius: 10px;
+}
+
+.service1 {
+    display: flex;
+    width: 50%;
+    align-items: center;  
+    height: 100%; 
+    flex-direction: column;
+    background-color: #98bea4;
+    border-radius: 10px;
+}
+
+.informe{
+    width: 100%;
+    height: 50%;
+    font-size: 15px;
+    text-align: center;
+}
+
+.herraminetas{
+    width: 100%;
+    height: 50%;
+    font-size: 15px;
+    text-align: center;
+}
+
+.columna2{
+    background-image: url("/Assets/img/prioridades-ambientales.jpg");
+    width: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.servicej:hover{
+    background-color: aquamarine;
+}
+
+.service1:hover{
+    background-color: aquamarine;
+}
+

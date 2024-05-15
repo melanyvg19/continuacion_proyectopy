@@ -1,0 +1,61 @@
+
+.contenedordatos{
+
+    display: flex;
+    height: 500px;
+    margin: 10px;
+    
+}
+
+.cajita1{
+    width: 50%;
+    background-image: url("/Assets/img/datos.jpg");
+    background-size:contain;
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cajita2{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(56, 145, 111);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.contenedor:hover{
+    background-color: aquamarine;
+}
+
+.cajita2:hover{
+    background-color: aquamarine;
+}
+
+/*RESPONSIVE DESIGN*/
+
+
+
+@media screen and (max-width: 1000px){
+    .contenedordatos{
+    display: flex;
+    width: 100%; 
+    height: 100%;
+    background-color: #98bea4;
+    border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .contenedordatos{
+        display: flex;
+        width: 120%;
+        align-items: center;  
+        flex-direction: column;
+        height: 120%;
+        background-color: #98bea4;
+        border-radius: 10px;
+}
+}
+

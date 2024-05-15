@@ -1,0 +1,18 @@
+.noticias{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.contenedortitulo:hover{
+    background-color: aquamarine;
+}
+
+.container{
+    display: flex;
+    margin: 10px;
+    border-radius: 10px;
+    
+    background-color:#98bea4;
+}
+
+
+

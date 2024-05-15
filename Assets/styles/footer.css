@@ -1,0 +1,58 @@
+footer{
+    margin: 10px;
+    background-color: #98bea4;
+    text-align: center;
+    padding-top: 10px 0; 
+    border-radius: 10px;
+    
+}
+
+.piepagina{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;    
+}
+
+.piepagina > li >a{
+    display: block;
+    padding: 15px 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.piepagina > li:hover{
+    background-color: #7ebc91;
+}
+
+img{
+    size: 10px;
+}
+
+/*RESPONSIVE DESIGN*/
+
+
+
+/*
+@media screen and (max-width: 1000px){
+    .piepaginan {
+    display: flex;
+    width: 100%;
+    align-items: center;  
+    flex-direction: column;
+    height: 100%;
+    background-color: #98bea4;
+    border-radius: 10px;
+    }
+}*/
+
+@media screen and (max-width: 600px){
+    .piepaginan ul{
+        display: flex;
+        width: 100%;
+        align-items: center;  
+        flex-direction: column;
+        height: 100%;
+        background-color: #98bea4;
+        border-radius: 10px;
+}
+}
