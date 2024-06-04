@@ -1,6 +1,7 @@
 import pandas as pd
 
 from data.generators.generadorCalidadAire import generarDatosCalidadAire
+from helpers.generarTabla import crearTablaHTML
  
 #1. PARA ANALIZAR DATOS CON PYTHON DEBEMOS CONSTRUIR UN DATAFRAME 
 
@@ -14,5 +15,6 @@ def construirDataFrameCalidadAire():
 
     #probando
     print(calidadAireDF)
+    crearTablaHTML(calidadAireDF, "calidadAire")
 
 construirDataFrameCalidadAire()

@@ -7,7 +7,7 @@ def generarDatosPluviometrico():
         lluviasXhora=random.choice(['nn'])
         lluviasXsemana=random.choice(['nn'])
         lluviasXmes=random.choice(['nn'])
-        precipitacion=random.choice=(['nn'])
+        precipitacion=random.choice(['nn'])
         pluviometrico=[municipio,lluviasXhora,lluviasXsemana,lluviasXmes,precipitacion]
 
         listaDatos.append(pluviometrico)
