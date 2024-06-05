@@ -5,7 +5,7 @@ import random
 def generarDatosCalidadAire():
     listaDatos=[]
     for i in range(1000):
-        comuna=random.choice(['comuna 1 popular', 'comuna 2 sta cruz', 'comuna 12 la america', 'comuna 4 aranjuez','comuna 5 castilla','comuna 6 doce de octubre', 'comuna 7 robledo','comuna 8 villa hermosa', 'comuna 9 buenos aires', 'comuna 10 la canelaria', 'comuna 11 laureles','comuna 12', 'comuna 13 san javier','comuna 14 el poblado','comuna 15 guayabal', 'comuna 16 belen', 'comuna 3 manrique'])
+        comuna=random.choice(['comuna 1 popular', 'comuna 2 sta cruz', 'comuna 12 la america', 'comuna 4 aranjuez','comuna 5 castilla','comuna 6 doce de octubre', 'comuna 7 robledo','comuna 8 villa hermosa', 'comuna 9 buenos aires', 'comuna 10 la canelaria', 'comuna 11 laureles','comuna 12', 'comuna 13 san javier','comuna 14 el poblado','comuna 15 guayabal', 'comuna 16 belen', 'comuna 3 manrique', 'sin', '-'])
         totalPoblacion=random.choice(['3000','4500', '5000', '10000'])
         tamañoMuestra=random.choice(['1000','2000', '3500', '6000'])
         ica=random.randint(20, 100)
