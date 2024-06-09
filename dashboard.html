@@ -3,24 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/styles/dashboardhtml.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
     <main>
         <div class="container">
+            <h1>Calidad del Aire del Valle de Aburra</h1>
+            <hr>
+            <h3>El siguiente estudio muestra la Calidad del Aire del Valle de Aburra</h3>
+            <p>En este proyecto, se realizó un análisis detallado de la calidad del aire en el Valle de Aburrá, enfocándose en identificar y categorizar los niveles de contaminación atmosférica en estado peligroso. Utilizando una muestra de 100 registros, se evaluaron los índices de Calidad del Aire (ICA) superiores a 70, lo que representa un riesgo significativo para la salud pública. Los datos fueron agrupados por comuna y se generaron tres tablas que presentan el conteo, la suma y el promedio de los ICA peligrosos para cada área. Estos resultados permiten visualizar de manera clara y precisa las zonas con mayor concentración de contaminantes, facilitando así la implementación de medidas correctivas. Las tablas mostradas a continuación proporcionan una visión comprensiva de la situación actual y son fundamentales para la toma de decisiones en políticas ambientales y de salud. </p>
+            <hr>
             <div class=""row>
                 <div class="col-12 col-md-4 my-5">
-                    <h3>Nuestros resultados</h3>
-                    <hr>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut omnis laboriosam et laborum sed quas non iure voluptatibus debitis tempora deserunt corporis, praesentium eveniet, aliquid beatae soluta eligendi placeat sit?</p>
+                   
                 </div>
                 <div class="col2 col-md-8">
-                    <iframe src="./tables/calidadAire.html" class="w-100" height="400"></iframe>
-                    <iframe src="./tables/TablaPluviometrico.html" class="w-100" height="400"></iframe>
-                    <iframe src="./tables/TablaRuido.html" class="w-100" height="400"></iframe>
-                    <iframe src="./tables/TablaSiembraArboles.html" class="w-100" height="400"></iframe>
-
+                    <h1>Las siguientes tablas muestran la Calidad del Aire del Valle de Aburra</h1>
+                    <div class="tables-container">
+                        <div class="table-item">
+                            <iframe src="./tables/calidadAire.html" height="300" width="200%"></iframe>
+                        </div>
+                        <div class="table-item">              
+                            <iframe src="./tables/TablaPluviometrico.html" height="300" width="200%"></iframe>
+                        </div>
+                    </div>
                 </div>
+                <div class="col2 col-md-8">
+                    <div class="tables-container">
+                        <div class="table-item">
+                            <iframe src="./tables/TablaRuido.html" height="300" width="200%"></iframe>
+                        </div>
+                        <div class="table-item">
+                            <iframe src="./tables/TablaSiembraArboles.html" height="300" width="200%"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="col-12">
+                    <h1>Las siguientes tablas muestran los niveles criticos pluviometricos del Valle de Aburra en los ultimos 5 años</h1>
+                    <div class="tables-container">
+                        <div class="table-item">
+                            <h3>Cantidad de Municipios</h3>
+                            <h3>Niveles mayores a 5.3 mm dia</h3>
+                            <iframe src="./tables/comteoLluviaxDiaPeligroso.html" height="300" width="100%"></iframe>
+                        </div>
+                        <div class="table-item">
+                            <h3>Suma de Municipios</h3>
+                            <h3>Niveles mayores a 150 mm mes</h3>
+                            <iframe src="./tables/comteoLluviaxMesPeligroso.html" height="300" width="100%"></iframe>
+                        </div>
+                        <div class="table-item">
+                            <h3>Promedio de Municipos</h3>
+                            <h3>Niveles mayores a 1900 mm año</h3>
+                            <iframe src="./tables/comteoLluviaxAnoPeligroso.html" height="300" width="100%"></iframe>
+                        </div>
+                    </div>
+                </div>   
             </div>
         </div>
     </main>
