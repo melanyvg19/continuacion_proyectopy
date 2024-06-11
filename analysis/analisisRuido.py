@@ -69,5 +69,17 @@ def construirDTRuido():
     print('\nPromedio DB alto(dia) por comuna:')
     print(promDiaAlto)
 
+    #Tablas
+    #Noche
+    crearTablaHTML(promNocheBajo, "Promedio Ruido Bajo por Comuna (Noche)")
+    crearTablaHTML(promNocheMedio, "Promedio Ruido Medio por Comuna (Noche)")
+    crearTablaHTML(promNocheAlto, "Promedio Ruido Alto por Comuna (Noche)")
+
+    #Dia
+    crearTablaHTML(promDiaBajo, "Promedio Ruido Bajo por Comuna (Dia)")
+    crearTablaHTML(promDiaMedio, "Promedio Ruido Medio por Comuna (Dia)")
+    crearTablaHTML(promDiaAlto, "Promedio Ruido Alto por Comuna (Dia)")
+
+
 
 construirDTRuido()
