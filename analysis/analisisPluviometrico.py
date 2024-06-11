@@ -21,18 +21,46 @@ def construirDataFramepluviometrico():
     filtroAnoPeligroso = pluviometricoDF.query("(precipitacion >=1900)")
     
     cuentaDiaPeligroso = filtroDiaPeligroso.groupby('municipio')['lluviaXdia'].count()
-    cuentaDiaPeligrosoDF = cuentaDiaPeligroso.reset_index().rename(columns={'lluviaXdia':'llovias por dia'})
-    crearTablaHTML(cuentaDiaPeligrosoDF, "comteoLluviaxDiaPeligroso")
+    cuentaDiaPeligrosoDF = cuentaDiaPeligroso.reset_index().rename(columns={'lluviaXdia':'lluvias por dia:'})
+    #crearTablaHTML(cuentaDiaPeligrosoDF, "conteoLluviaxDiaPeligroso")
     
     cuentaMesPeligroso = filtroMesPeligroso.groupby('municipio')['lluviaXmes'].count()
     #print("Conteo LLuvias por dia en estado Peligroso: ",cuentaMesPeligroso)
-    cuentaMesPeligrosoDF = cuentaMesPeligroso.reset_index().rename(columns={'lluviaXmes':'llovias por mes'})
-    crearTablaHTML(cuentaMesPeligrosoDF, "comteoLluviaxMesPeligroso")
+    cuentaMesPeligrosoDF = cuentaMesPeligroso.reset_index().rename(columns={'lluviaXmes':'lluvias por mes:'})
+    #crearTablaHTML(cuentaMesPeligrosoDF, "conteoLluviaxMesPeligroso")
         
     cuentaAnoPeligroso = filtroAnoPeligroso.groupby('municipio')['precipitacion'].count()
     #print("Conteo LLuvias por Ano en estado Peligroso: ",cuentaAnoPeligroso)
-    cuentaAnoPeligrosoDF = cuentaAnoPeligroso.reset_index().rename(columns={'precipitacion':'llovias por Ano'})
-    crearTablaHTML(cuentaAnoPeligrosoDF, "comteoLluviaxAnoPeligroso")
+    cuentaAnoPeligrosoDF = cuentaAnoPeligroso.reset_index().rename(columns={'precipitacion':'lluvias por Anualidad:'})
+    #crearTablaHTML(cuentaAnoPeligrosoDF, "conteoLluviaxAnoPeligroso")
+
+    #suma milimetros de lluvia por municipio
+    sumaPrecipitacionAnual = filtroAnoPeligroso.groupby('municipio')['precipitacion'].sum()
+    sumaPrecipitacionAnualDF = sumaPrecipitacionAnual.reset_index().rename(columns={'precipitacion':'mm de precipitacion totales por Anualidad:'})
+    crearTablaHTML(sumaPrecipitacionAnualDF, "suma total de precipitacion anual")
+
+    #promedio lluvia por día
+    promedioLluviaDia = pluviometricoDF['lluviaXdia'].mean()
+    #promedio lluvia por mes
+    promedioLluviaMes = pluviometricoDF['lluviaXmes'].mean()
+    #promedio lluvia por año
+    promedioPrecipitacion = pluviometricoDF['precipitacion'].mean()
+
+    #creación de tablas
+    conteosDF = pd.DataFrame({
+        'Conteo de lluvia por dia': [cuentaDiaPeligrosoDF],
+        'Conteo de lluvia por mes': [cuentaMesPeligrosoDF],
+        'Conteo de precipitacion anual': [cuentaAnoPeligrosoDF],
+    })
+
+    promediosDF = pd.DataFrame({
+        'Promedio de lluvia por día': [promedioLluviaDia],
+        'Promedio de lluvia por mes': [promedioLluviaMes],
+        'Promedio de precipitación anual': [promedioPrecipitacion]
+    })
+    crearTablaHTML(conteosDF, "Cantidades totales de lluvia")
+    crearTablaHTML(promediosDF, "promediosLluvias")
+    
 
 construirDataFramepluviometrico()
 
