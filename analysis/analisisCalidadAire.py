@@ -42,6 +42,15 @@ def construirDataFrameCalidadAire():
     promedioPositivo = sumaPositivo / cuentaPositivo
     promedioModerado = sumaModerado / cuentaModerado
     promedioPeligroso = sumaPeligroso / cuentaPeligroso
+
+    promedioPositivoDF = promedioPositivo.reset_index().rename(columns={'ICA': 'Promedio ICA'})
+    promedioModeradoDF = promedioModerado.reset_index().rename(columns={'ICA': 'Promedio ICA'})
+    promedioPeligrosoDF = promedioPeligroso.reset_index().rename(columns={'ICA': 'Promedio ICA'})
+
+    crearTablaHTML(promedioPositivoDF, "Calidad de aire positivo")
+    crearTablaHTML(promedioModeradoDF, "Calidad de aire moderado")
+    crearTablaHTML(promedioPeligrosoDF, "Calidad de aire peligroso")
+    
     print("Promedio ICA Positivo por Comuna:")
     print(promedioPositivo)
     print("\nPromedio ICA Moderado por Comuna:")
