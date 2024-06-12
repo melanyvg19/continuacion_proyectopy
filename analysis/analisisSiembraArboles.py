@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt 
 from data.generators.siembraArboles import generarSiembraArboles
 from helpers.generarTabla import crearTablaHTML
 
@@ -17,13 +18,23 @@ def construirDTSiembraArboles():
     nivelMedio = siembraArbolesDF.query("(hectareasSembradasAnio > 100) and (hectareasSembradasAnio <= 1000)")
     nivelAlto = siembraArbolesDF.query("(hectareasSembradasAnio > 1000)")
 
+    promedioAnalisis= siembraArbolesDF.groupby("corregimiento")['hectareasSembradasAnio'].mean()
+    plt.figure(figsize=(20,20))    
+    promedioAnalisis.plot(kind='bar',color='green')
+    plt.title('Siembra de arboles Valle de Aburra')
+    plt.xlabel('Corregimiento')
+    plt.ylabel('hectareasSembradasAnio')
+    plt.grid(True)
+    plt.xticks(rotation=45)
+    plt.savefig('./Assets/img/analisisSiembra.png',format='png',dpi=300)
+
     deficit = nivelBajo.groupby('corregimiento')['hectareasSembradasAnio'].count()    
     moderado = nivelMedio.groupby('corregimiento')['hectareasSembradasAnio'].count()
     superavit = nivelAlto.groupby('corregimiento')['hectareasSembradasAnio'].count()   
 
-    print('Niveles bajos por corregimiento:', deficit)
-    print('Niveles medios por corregimiento:', moderado)
-    print('Niveles altos por corregimiento:', superavit)
+    #print('Niveles bajos por corregimiento:', deficit)
+    #print('Niveles medios por corregimiento:', moderado)
+    #print('Niveles altos por corregimiento:', superavit)
 
     sumaDeficit = nivelBajo.groupby('corregimiento')['hectareasSembradasAnio'].sum()
     sumaModerado = nivelMedio.groupby('corregimiento')['hectareasSembradasAnio'].sum()
@@ -41,11 +52,11 @@ def construirDTSiembraArboles():
     promedioSuperavitDF = promedioSuperavit.reset_index().rename(columns={'hectareasSembradasAnio':'Promedio Superavit'})
     crearTablaHTML(promedioSuperavitDF, "promedioSuperavit")
 
-    print('Promedio Siembra bajo por corregimiento:')
-    print(promedioDeficit)
-    print('\nPromedio Siembra moderado por corregimiento:')
-    print(promedioModerado)
-    print('\nPromedio Siembra superavit por corregimiento:')
-    print(promedioSuperavit)  
+    #print('Promedio Siembra bajo por corregimiento:')
+    #print(promedioDeficit)
+    #print('\nPromedio Siembra moderado por corregimiento:')
+    #print(promedioModerado)
+    #print('\nPromedio Siembra superavit por corregimiento:')
+    #print(promedioSuperavit)  
 
 construirDTSiembraArboles()
