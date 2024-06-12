@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt 
 from data.generators.pluviometrico import generarDatosPluviometrico
 from helpers.generarTabla import crearTablaHTML
 #from helpers.generarGrafico import crearGraficoHTML
@@ -19,6 +20,18 @@ def construirDataFramepluviometrico():
     filtroDiaPeligroso = pluviometricoDF.query("(lluviaXdia >= 5.3)")
     filtroMesPeligroso = pluviometricoDF.query("(lluviaXmes >=150)")
     filtroAnoPeligroso = pluviometricoDF.query("(precipitacion >=1900)")
+
+    datosagrupadosMes=pluviometricoDF.groupby("municipio")["lluviaXmes"].mean()
+
+        #graficando datos Mes
+    plt.figure(figsize=(20,20))
+    datosagrupadosMes.plot(kind='bar',color='green')
+    plt.title('Niveles Pluviometricos del Valle de Aburra')
+    plt.xlabel('municipio')
+    plt.ylabel('lluviaXmes (Lluvias por Mes en mm)')
+    plt.grid(True)
+    plt.xticks(rotation=45)
+    plt.savefig('./Assets/img/pluviometricoMes.png',format='png',dpi=300)
     
     cuentaDiaPeligroso = filtroDiaPeligroso.groupby('municipio')['lluviaXdia'].count()
     cuentaDiaPeligrosoDF = cuentaDiaPeligroso.reset_index().rename(columns={'lluviaXdia':'lluvias por dia:'})

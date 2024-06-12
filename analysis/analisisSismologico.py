@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt 
 from data.generators.sismologico import generarDatosSismologico
 from helpers.generarTabla import crearTablaHTML
 
@@ -12,7 +13,7 @@ def construirDTsismologico():
     columnas_a_convertir = ['sismosUltimaAnualidad','escalaRichter','poblacionAfectada']
     sismosDF[columnas_a_convertir] = sismosDF[columnas_a_convertir].astype(float)
  
-    print(sismosDF)
+    #print(sismosDF)
     #crearTablaHTML(sismosDF,"calidadSismos")
        
     filtroSismos = sismosDF.query("(sismosUltimaAnualidad >=2)")
@@ -39,6 +40,14 @@ def construirDTsismologico():
         'Promedio Sismos': [promedioSismosDF]
     })
     crearTablaHTML(tablasSismologicoDF, "Tablas analisis simologico")
+    plt.figure(figsize=(20,20))
+    promedioSismos.plot(kind='bar', color='green')
+    plt.title('Promedio sismos en medellin')
+    plt.xlabel('Municipio')
+    plt.ylabel('Evenetos sismologicos')
+    plt.grid(True)
+    plt.xticks(rotation=45)
+    plt.savefig('./Assets/img/promedioSismos.png', format='png', dpi=300)
 
 
 

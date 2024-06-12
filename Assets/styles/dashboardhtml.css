@@ -6,9 +6,6 @@ h1{
 h3{
     color: rgb(58, 58, 95);
 }
-h2{
-    text-align: center;
-}
 .container {
     width: 100%;
     padding: 0 15px;
@@ -31,8 +28,9 @@ h2{
 
 .tables-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
 }
 .grafico {
     display: flex;
@@ -49,6 +47,7 @@ h2{
 .table-item {
     flex: 0 0 33.3333%;
     max-width: 33.3333%;
+    align-items: center;
     padding: 15px;
     box-sizing: border-box;
 
